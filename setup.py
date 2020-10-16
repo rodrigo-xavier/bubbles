@@ -14,12 +14,10 @@ IMG_PATH = "../../.database/pibic/pygame/img/"
 
 SURFACE_COLOR = (0,0,0)
 BUBBLES_COLOR = (255,255,255)
-WIDTH, HEIGHT = 500, 500
-FPS = 0
-NUMBER_OF_FRAMES = 120000
-BUBBLES_RADIUS = 30
-CIRCLE_BUBBLES = 10
-SQUARE_BUBBLES = 10
+WIDTH, HEIGHT = 700, 700
+BUBBLES_RADIUS = 10
+CIRCLE_BUBBLES = 70
+SQUARE_BUBBLES = 70
 
 ################# Select Save Option ################
 
@@ -50,7 +48,6 @@ def play_game():
     
     bubble = BubblesGame(
         SURFACE_COLOR=SURFACE_COLOR,
-        FPS=FPS,
         CIRCLE_BUBBLES=CIRCLE_BUBBLES,
         SQUARE_BUBBLES=SQUARE_BUBBLES,
         BUBBLES_COLOR=BUBBLES_COLOR,

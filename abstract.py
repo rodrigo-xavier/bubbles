@@ -25,7 +25,7 @@ class Bubbles(ABC):
         self.width = kwargs['width']
         self.height = kwargs['height']
 
-        self.v = np.array([random.random(), random.random()])
+        self.v = np.array([random.random(), random.random()])*10
         self.m = random.random()
         # self.radius = int(self.m*kwargs['bubbles_radius'])
         self.x = kwargs['x']

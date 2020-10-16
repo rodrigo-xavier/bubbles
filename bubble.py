@@ -9,11 +9,10 @@ import math, random
 class BubblesGame:
     bubbles = []
 
-    def __init__(self, SURFACE_COLOR=(0,0,0), FPS=60, CIRCLE_BUBBLES=1, SQUARE_BUBBLES=1, BUBBLES_COLOR=(255,255,255), BUBBLES_RADIUS=1, WIDTH=50, HEIGHT=50):
+    def __init__(self, SURFACE_COLOR=(0,0,0), CIRCLE_BUBBLES=1, SQUARE_BUBBLES=1, BUBBLES_COLOR=(255,255,255), BUBBLES_RADIUS=1, WIDTH=50, HEIGHT=50):
         
         self.surface = pygame.display.set_mode((WIDTH,HEIGHT))
         self.surface_color = SURFACE_COLOR
-        self.fps = FPS
 
         for i in range(CIRCLE_BUBBLES):
             x, y = self.build_far(BUBBLES_RADIUS, WIDTH, HEIGHT)
@@ -101,9 +100,7 @@ class BubblesGame:
         self.surface.fill(self.surface_color)
         self.close()
         self.move()
-
         pygame.display.flip()
-        pygame.time.Clock().tick(self.fps)
     
     def save(self, path, name):
         file = path + str(name) + '.png'
